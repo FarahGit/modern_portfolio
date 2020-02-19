@@ -179,10 +179,33 @@ main {
     padding: 0.5rems;
     border-bottom: #eece1a 5px solid; }
 
+.grid-filter {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: rgba(73, 73, 73, 0.5);
+  margin-bottom: 1rem; }
+  .grid-filter span {
+    margin: 0 12px; }
+    .grid-filter span.filter-item {
+      cursor: pointer;
+      display: inline-block;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 0.5rem;
+      background: rgba(73, 73, 73, 0.5);
+      position: relative; }
+      .grid-filter span.filter-item.active {
+        border-bottom: 1px solid #eece1a;
+        transition: all 0.5s ease-out; }
+      .grid-filter span.filter-item:hover {
+        border-color: #eece1a;
+        transition: all 0.5s ease-out; }
+
 .projects {
   display: grid;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(4, 1fr); }
   .projects img {
     width: 100%;
     border: 3px #fff solid; }

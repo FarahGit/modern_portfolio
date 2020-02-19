@@ -113,11 +113,45 @@ main {
   }
 }
 
+// Work/Grid-filter
+.grid-filter {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: rgba(lighten($primary-color, 2), 0.5);
+  margin-bottom: 1rem;
+
+  span {
+    margin: 0 12px;
+
+    &.filter-item {
+      cursor: pointer;
+      display: inline-block;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 0.5rem;
+      background: rgba(lighten($primary-color, 2), 0.5);
+      position: relative;
+
+      &.active {
+        border-bottom: 1px solid $secondary-color;
+        @include easeOut;
+      }
+
+      &:hover {
+        border-color: $secondary-color;
+        @include easeOut;
+      }
+    }
+  }
+}
+
 // Work/Projects
+
 .projects {
   display: grid;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
   img {
     width: 100%;
